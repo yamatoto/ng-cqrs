@@ -1,40 +1,35 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.134.0/containers/javascript-node
 {
-	"name": "Node.js",
-	"build": {
-		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick a Node version: 10, 12, 14
-		"args": { "VARIANT": "14" }
-	},
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick a Node version: 10, 12, 14
+    "args": { "VARIANT": "14" }
+  },
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash"
-	},
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
 
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
+  // Add the IDs of extensions you want installed when the container is created.
+  // NOTE: 「ローカルにインストール」ボタンが出る拡張機能はローカルにインストールが必要です
+  "extensions": [
     "dbaeumer.vscode-eslint",
+    "ms-azuretools.vscode-docker",
     "antfu.i18n-ally",
     "nucllear.vscode-extension-auto-import",
-    "msjsdiag.debugger-for-chrome",
     "wooodhead.disable-eslint-rule",
-    "vscode-icons-team.vscode-icons",
     "editorconfig.editorconfig",
     "tombonnike.vscode-status-bar-format-toggle",
     "donjayamanne.githistory",
     "eamodio.gitlens",
-    "abusaidm.html-snippets",
     "oderwat.indent-rainbow",
     "zignd.html-css-class-completion",
-    "ms-ceintl.vscode-language-pack-ja",
-    "xabikos.javascriptsnippets",
     "wmaurer.vscode-jumpy",
-    "pkief.material-icon-theme",
     "eg2.vscode-npm-script",
     "christian-kohler.npm-intellisense",
-    "ibm.output-colorizer",
     "ionutvmi.path-autocomplete",
     "christian-kohler.path-intellisense",
     "esbenp.prettier-vscode",
@@ -42,9 +37,7 @@
     "chrmarti.regex",
     "sibiraj-s.vscode-scss-formatter",
     "streetsidesoftware.code-spell-checker",
-    "johnpapa.vscode-peacock",
     "alefragnani.bookmarks",
-    "coenraads.bracket-pair-colorizer",
     "mikael.angular-beastcode",
     "angular.ng-template",
     "hardikpthv.angularmaterial",
@@ -53,14 +46,14 @@
     "fivethree.vscode-ionic-snippets",
     "hardikpthv.ngrxsnippets",
     "nrwl.angular-console"
-	],
+  ],
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
 
-	// Specifies a command that should be run after the container has been created.
-	"postCreateCommand": "yarn install",
+  // Specifies a command that should be run after the container has been created.
+  "postCreateCommand": "yarn install",
 
-	// Comment out the next line to run as root instead.
-	"remoteUser": "node"
+  // Comment out the next line to run as root instead.
+  "remoteUser": "node"
 }

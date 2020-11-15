@@ -67,6 +67,7 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.wordWrap": "off", // 右端で折り返す
+  // 拡張機能
   "extensions.ignoreRecommendations": false, // 推奨事項の通知をOFF
   // エクスプローラー
   "explorer.confirmDragAndDrop": false,
@@ -106,6 +107,8 @@
   "html.format.contentUnformatted": "pre,code,textarea", // コンテンツを再フォーマットしてはならないタグをコンマで区切ってリストにする。'null' は、既定値の'pre' タグを表す。
   "html.format.wrapAttributes": "auto", // 属性を折り返す。
   "html.format.indentInnerHtml": true,
+  // i18n
+  "i18n-ally.localesPaths": "src/assets/i18n",
   // indentRainbow
   "indentRainbow.colors": [
     "rgba(255,255,64,0.3)",
@@ -118,6 +121,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   // peacock
   "peacock.color": "#dd0531",
+  "peacock.remoteColor": "#dd0531",
   // SCSS Formatter
   "scssFormatter.printWidth": 120,
   "scssFormatter.singleQuote": true,
@@ -137,7 +141,14 @@
   // ワークベンチ設定
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#fa1b49",
+    "activityBar.activeBorder": "#155e02",
+    "activityBar.background": "#fa1b49",
     "activityBar.border": "#ffffff",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#155e02",
+    "activityBarBadge.foreground": "#e7e7e7",
     "editor.background": "#121817",
     "editor.lineHighlightBackground": "#002255",
     "editor.selectionBackground": "#660000",
@@ -154,7 +165,13 @@
     "statusBar.noFolderForeground": "#ffffff",
     "sideBar.background": "#000000",
     "sideBar.foreground": "#ffffff",
-    "tab.inactiveForeground": "#999999"
-  },
-  "i18n-ally.localesPaths": "src/assets/i18n"
+    "statusBar.background": "#dd0531",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#fa1b49",
+    "tab.inactiveForeground": "#999999",
+    "titleBar.activeBackground": "#dd0531",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#dd053199",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  }
 }

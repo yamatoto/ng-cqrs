@@ -1,6 +1,16 @@
 {
   "recommendations": [
-    "ms-vscode-remote.remote-containers"
+    "ms-vscode-remote.remote-containers",
+    "ms-ceintl.vscode-language-pack-ja",
+    "msjsdiag.debugger-for-chrome",
+    "vscode-icons-team.vscode-icons",
+    "coenraads.bracket-pair-colorizer",
+    "ibm.output-colorizer",
+    "pkief.material-icon-theme",
+    "xabikos.javascriptsnippets",
+    "abusaidm.html-snippets",
+    "ms-azuretools.vscode-docker",
+    "johnpapa.vscode-peacock"
   ],
   "unwantedRecommendations": [
     "davidanson.vscode-markdownlint",
