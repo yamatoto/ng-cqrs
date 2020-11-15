@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-vscode-remote.remote-containers"
+  ],
+  "unwantedRecommendations": [
+    "davidanson.vscode-markdownlint",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "mindaro.mindaro",
+    "vscodevim.vim",
+    "github.vscode-pull-request-github"
+  ]
+}
