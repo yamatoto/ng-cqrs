@@ -72,7 +72,7 @@
   "explorer.confirmDragAndDrop": false,
   // ファイル設定
   "files.autoGuessEncoding": false, // 文字コードを自動判別
-  "files.autoSave": "off", //ダーティファイルの作成を無効
+  "files.autoSave": "onFocusChange", //ダーティファイルの作成を無効
   "files.encoding": "utf8",
   "files.eol": "\n", // 改行コードをLF(Linux/OSX)にする
   "files.exclude": { // エクスプローラーから除外するファイルとフォルダ
