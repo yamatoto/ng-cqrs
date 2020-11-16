@@ -9,7 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { metaReducers, reducers } from './shared/store/app-store';
+import { metaReducers, reducers } from './shared/store/app-store/app.reducer';
 
 @NgModule({
   declarations: [AppComponent],

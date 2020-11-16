@@ -2,9 +2,10 @@
 
 <ion-content>
   <div>
-    <ul>
-      <li [routerLink]="['/hero/1']">ヒーロー1</li>
-      <li [routerLink]="['/hero/2']">ヒーロー2</li>
+    <ul *ngIf="heroes$ | async as heroes">
+      <li *ngFor="let hero of heroes" [routerLink]="['/hero/' + hero.id]">
+        {{hero.name}}
+      </li>
     </ul>
   </div>
 </ion-content>
