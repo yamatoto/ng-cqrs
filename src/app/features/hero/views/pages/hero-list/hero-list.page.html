@@ -1,9 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>hero-list</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="hero-list"></app-header>
 
 <ion-content>
-
+  <div>
+    <ul>
+      <li [routerLink]="['/hero/1']">ヒーロー1</li>
+      <li [routerLink]="['/hero/2']">ヒーロー2</li>
+    </ul>
+  </div>
 </ion-content>
