@@ -1,3 +1,8 @@
 <app-header title="hero-detail"></app-header>
 
-<ion-content> hero-detail{{heroId}} </ion-content>
+<ion-content *ngIf="hero$ | async as hero">
+  <div>ヒーローID：{{hero.id}}</div>
+  <div>{{hero.name}}</div>
+  <div>{{hero.level}}級</div>
+  <div>{{hero.lank}}位</div>
+</ion-content>
