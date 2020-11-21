@@ -5,7 +5,7 @@ import * as HeroActions from './hero.actions';
 export const key = 'heroStore';
 
 export interface HeroState {
-  heroes: Hero[];
+  heroes: Hero[] | null;
 }
 
 export const initialHeroState: HeroState = {

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Hero } from 'src/app/shared/models/hero.model';
-import { HeroRepository } from '../../../repositories/hero.repository';
+import { HeroListQuery } from '../../../queries/hero-list.query';
+import { HeroListUsecase } from '../../../usecases/hero-list.usecase';
 
 @Component({
   selector: 'app-hero-list',
@@ -9,11 +8,11 @@ import { HeroRepository } from '../../../repositories/hero.repository';
   styleUrls: ['./hero-list.page.scss'],
 })
 export class HeroListPage implements OnInit {
-  heroes$: Observable<Hero[]>;
+  heroes$ = this.query.state$;
 
-  constructor(private heroRepository: HeroRepository) { }
+  constructor(private query: HeroListQuery, private usecase: HeroListUsecase) { }
 
   ngOnInit() {
-    this.heroes$ = this.heroRepository.findAll();
+    this.usecase.fetchHeroes();
   }
 }

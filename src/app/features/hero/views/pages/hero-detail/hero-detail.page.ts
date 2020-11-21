@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Hero } from 'src/app/shared/models/hero.model';
-import { HeroRepository } from '../../../repositories/hero.repository';
+import { HeroDetailQuery } from '../../../queries/hero-detail.query';
+import { HeroDetailUsecase } from '../../../usecases/hero-detail.usecase';
 
 @Component({
   selector: 'app-hero-detail',
@@ -10,13 +9,13 @@ import { HeroRepository } from '../../../repositories/hero.repository';
   styleUrls: ['./hero-detail.page.scss'],
 })
 export class HeroDetailPage implements OnInit {
-  hero$: Observable<Hero>;
+  state$ = this.query.state$;
 
-  constructor(private route: ActivatedRoute, private heroRepository: HeroRepository) { }
+  constructor(private route: ActivatedRoute, private query: HeroDetailQuery, private usecase: HeroDetailUsecase) { }
 
   ngOnInit() {
     const heroId = this.route.snapshot.paramMap.get('id');
-    this.hero$ = this.heroRepository.findById(heroId);
+    this.usecase.fetchHeroById(heroId);
   }
 
 }
