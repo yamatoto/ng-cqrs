@@ -15,7 +15,7 @@ export class HeroDetailPage implements OnInit {
 
   ngOnInit() {
     const heroId = this.route.snapshot.paramMap.get('id');
-    this.usecase.fetchHeroById(heroId);
+    this.usecase.findHeroById(heroId);
   }
 
 }

@@ -6,10 +6,12 @@ export const key = 'heroStore';
 
 export interface HeroState {
   heroes: Hero[] | null;
+  viewingHeroId: string;
 }
 
 export const initialHeroState: HeroState = {
-  heroes: null
+  heroes: null,
+  viewingHeroId: null
 };
 
 export const heroReducer = createReducer(
@@ -17,6 +19,10 @@ export const heroReducer = createReducer(
 
   on(HeroActions.setHeroes, (state, { heroes }) => {
     return { ...state, heroes };
+  }),
+
+  on(HeroActions.setViewingHeroId, (state, { heroId }) => {
+    return { ...state, viewingHeroId: heroId };
   })
 
 );

@@ -8,7 +8,7 @@ import { HeroListUsecase } from '../../../usecases/hero-list.usecase';
   styleUrls: ['./hero-list.page.scss'],
 })
 export class HeroListPage implements OnInit {
-  heroes$ = this.query.state$;
+  state$ = this.query.state$;
 
   constructor(private query: HeroListQuery, private usecase: HeroListUsecase) { }
 

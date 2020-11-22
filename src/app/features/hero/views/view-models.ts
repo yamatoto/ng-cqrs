@@ -5,5 +5,5 @@ export interface HeroDetailPageModel {
 };
 
 export interface HeroListPageModel {
-  heroes: Hero[];
+  heroes: {id: string; name: string}[];
 };
