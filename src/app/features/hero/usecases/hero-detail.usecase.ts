@@ -8,7 +8,7 @@ export class HeroDetailUsecase {
 
   constructor(private store: Store<AppState>) { }
 
-  findHeroById(heroId: string): void {
+  setViewingHeroId(heroId: string): void {
     this.store.dispatch(HeroActions.setViewingHeroId({heroId}));
   }
 }
