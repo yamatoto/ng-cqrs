@@ -2,7 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 import { Hero } from 'src/app/shared/models/hero.model';
 import * as HeroActions from './hero.actions';
 
-export const key = 'heroStore';
+export const featureKey = 'heroStore';
 
 export interface HeroState {
   heroes: Hero[] | null;
@@ -14,7 +14,7 @@ export const initialHeroState: HeroState = {
   viewingHeroId: null
 };
 
-export const heroReducer = createReducer(
+export const reducer = createReducer(
   initialHeroState,
 
   on(HeroActions.setHeroes, (state, { heroes }) => {

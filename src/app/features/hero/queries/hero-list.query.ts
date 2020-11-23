@@ -24,4 +24,8 @@ export class HeroListQuery {
       };
     })
   );
+
+  fetchHeroes(): Observable<Hero[]> {
+    return this.store.pipe(select(selectAllHeroes));
+  }
 }

@@ -18,9 +18,9 @@ import { metaReducers, reducers } from './shared/store/app-store/app.reducer';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreModule.forRoot(reducers, { metaReducers })
   ],
   providers: [
     StatusBar,
