@@ -11,8 +11,11 @@ export class HeroListUsecase {
 
   constructor(private store: Store<AppState>, private query: HeroListQuery, private heroRepository: HeroRepository) { }
 
+  /**
+   * storeになければAPI取得してdispatch.
+   */
   fetchHeroes(): void {
-    this.query.fetchHeroes().pipe(
+    this.query.selectHeroes().pipe(
       filter(heroes => heroes === null),
       mergeMap(() => this.heroRepository.findAll())
     ).subscribe(heroes => {

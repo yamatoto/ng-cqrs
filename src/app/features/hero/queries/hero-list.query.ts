@@ -25,7 +25,7 @@ export class HeroListQuery {
     })
   );
 
-  fetchHeroes(): Observable<Hero[]> {
+  selectHeroes(): Observable<Hero[]> {
     return this.store.pipe(select(selectAllHeroes));
   }
 }
