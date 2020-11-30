@@ -1,4 +1,4 @@
-export function isNullOrUndef(obj): boolean {
+export function isNullOrUndef(obj: any): boolean {
   return obj === null || obj === undefined;
 }
 
